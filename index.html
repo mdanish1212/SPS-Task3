@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardioPredict | AI Powered Heart Health</title>
+  <meta name="author" content="Danish Zahoor">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <!-- Sidebar -->
+  <aside class="sidebar position-fixed top-0 start-0 vh-100" id="sidebar">
+    <div class="brand d-flex align-items-center border-bottom">
+      <div class="brand-heart">♥</div>
+      <div>
+        <div class="brand-name">Cardio <span>Predict</span></div>
+        <small>AI Powered Heart Health</small>
+      </div>
+    </div>
+    <nav class="side-nav nav flex-column p-2">
+      <a href="#dashboard" class="nav-item nav-link active d-flex align-items-center gap-2" data-section="dashboard"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+      <a href="#predict" class="nav-item nav-link d-flex align-items-center gap-2" data-section="predict"><span class="nav-icon">♧</span><span>Predict Disease</span></a>
+      <a href="#patients" class="nav-item nav-link d-flex align-items-center gap-2" data-section="patients"><span class="nav-icon">♟</span><span>Patient Records</span></a>
+      <a href="#analytics" class="nav-item nav-link d-flex align-items-center gap-2" data-section="analytics"><span class="nav-icon">▥</span><span>Analytics</span></a>
+      <a href="#reports" class="nav-item nav-link d-flex align-items-center gap-2" data-section="reports"><span class="nav-icon">▤</span><span>Reports</span></a>
+      <a href="#settings" class="nav-item nav-link d-flex align-items-center gap-2" data-section="settings"><span class="nav-icon">⚙</span><span>Settings</span></a>
+    </nav>
+    <div class="sidebar-art">
+      <div class="ecg">⌁⌁⌁</div>
+      <div class="big-heart">♥</div>
+      <div class="quote text-center">“Prevention<br>Today<br>A Healthier<br>Tomorrow”</div>
+    </div>
+    <div class="copyright">© 2026 CardioPredict<br>All Rights Reserved.<br><b>Performed by Danish Zahoor</b></div>
+  </aside>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Top navigation -->
+    <header class="topbar navbar navbar-dark sticky-top">
+      <button class="mobile-toggle btn btn-outline-danger d-lg-none" id="mobileToggle" type="button" aria-label="Open menu">☰</button>
+      <div class="search-wrap input-group">
+        <input id="globalSearch" class="form-control" type="search" placeholder="Search patient, report...">
+        <span class="input-group-text">⌕</span>
+      </div>
+      <div class="top-art"><span class="pulse-line">╱╲╱╲</span><div>HEALTHY HEART<br><b>BRIGHTER TOMORROW</b></div></div>
+      <div class="top-actions">
+        <button class="icon-btn" title="Notifications">♧<i>3</i></button>
+        <div class="avatar">●</div>
+        <div class="user-name"><b>Dr. Ahmed</b><small>Administrator</small></div>
+        <span>⌄</span>
+      </div>
+    </header>
+    <div class="content container-fluid">
+      <!-- DASHBOARD -->
+      <section class="page-section active" id="section-dashboard">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3">
+          <div><h1>Dashboard</h1><p>AI-powered heart disease risk monitoring overview</p></div>
+          <button class="btn btn-danger btn-red" data-go="predict">＋ New Prediction</button>
+        </div>
+        <!-- Statistics -->
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">♟</div><div><strong>1,248</strong><span>Total Patients</span><em>↑ 12% from last month</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">⌁</div><div><strong>312</strong><span>High Risk Cases</span><em>↑ 8% from last month</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">✓</div><div><strong>936</strong><span>Low Risk Cases</span><em>↑ 15% from last month</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">◔</div><div><strong>75%</strong><span>Prediction Accuracy</span><em>↑ 5% from last month</em></div></div></div>
+        </div>
+        <!-- Charts -->
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-lg-6 col-xl-7">
+            <div class="panel card h-100 trend-panel">
+              <div class="panel-head d-flex align-items-center justify-content-between gap-2"><h2>⌁ &nbsp;Heart Disease Risk Trend</h2><div class="legend"><span><i class="dot high"></i>High Risk</span><span><i class="dot low"></i>Low Risk</span></div></div>
+              <div class="chart-area">
+                <div class="y-labels"><span>100</span><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div>
+                <svg viewBox="0 0 760 300" preserveAspectRatio="none" class="line-chart" aria-label="Risk trend chart">
+                  <defs><linearGradient id="fillRed" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff1f2d" stop-opacity=".35"/><stop offset="1" stop-color="#ff1f2d" stop-opacity=".01"/></linearGradient></defs>
+                  <g class="gridlines"><path d="M45 20H745 M45 72H745 M45 124H745 M45 176H745 M45 228H745 M45 280H745"/></g>
+                  <path class="area" d="M45 176 L103 181 L161 98 L219 150 L277 145 L335 93 L393 145 L451 166 L509 72 L567 114 L625 60 L683 93 L745 88 L745 280 L45 280 Z"/>
+                  <polyline class="trend-line" points="45,176 103,181 161,98 219,150 277,145 335,93 393,145 451,166 509,72 567,114 625,60 683,93 745,88"/>
+                  <g class="points"><circle cx="45" cy="176" r="5"/><circle cx="103" cy="181" r="5"/><circle cx="161" cy="98" r="5"/><circle cx="219" cy="150" r="5"/><circle cx="277" cy="145" r="5"/><circle cx="335" cy="93" r="5"/><circle cx="393" cy="145" r="5"/><circle cx="451" cy="166" r="5"/><circle cx="509" cy="72" r="5"/><circle cx="567" cy="114" r="5"/><circle cx="625" cy="60" r="5"/><circle cx="683" cy="93" r="5"/><circle cx="745" cy="88" r="5"/></g>
+                </svg>
+                <div class="x-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-xl-2">
+            <div class="panel card h-100 donut-panel">
+              <div class="panel-head d-flex align-items-center justify-content-between"><h2>▮ &nbsp;Risk Distribution</h2></div>
+              <div class="donut-wrap"><div class="donut"><div><strong>1,248</strong><span>Patients</span></div></div></div>
+              <div class="donut-legend"><span><i class="dot high"></i>High Risk (75%)</span><span><i class="dot low"></i>Low Risk (25%)</span></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 col-xl-3">
+            <div class="panel card h-100 factors-panel">
+              <div class="panel-head d-flex align-items-center justify-content-between"><h2>⌁ &nbsp;Top Risk Factors</h2></div>
+              <div class="bar-chart">
+                <div class="bar-item"><b>82%</b><div class="bar" style="height:82%"></div><span>Age</span></div>
+                <div class="bar-item"><b>68%</b><div class="bar" style="height:68%"></div><span>Blood<br>Pressure</span></div>
+                <div class="bar-item"><b>61%</b><div class="bar" style="height:61%"></div><span>Cholesterol</span></div>
+                <div class="bar-item"><b>54%</b><div class="bar" style="height:54%"></div><span>Max Heart<br>Rate</span></div>
+                <div class="bar-item"><b>43%</b><div class="bar" style="height:43%"></div><span>Chest<br>Pain</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Prediction and recent records -->
+        <div class="row g-3">
+          <div class="col-12 col-xl-7">
+            <div class="panel card predict-panel h-100">
+              <div class="panel-head d-flex align-items-center justify-content-between"><h2>♧ &nbsp;Predict Heart Disease</h2></div>
+              <div class="prediction-form" id="predictionForm">
+                <div class="row g-3">
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Age (years)<input class="form-control" id="age" type="number" placeholder="e.g. 45"></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Sex<select class="form-select" id="sex"><option value="">Select</option><option value="male">Male</option><option value="female">Female</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Chest Pain Type<select class="form-select" id="chest"><option value="">Select</option><option value="typical">Typical Angina</option><option value="atypical">Atypical Angina</option><option value="nonanginal">Non-anginal Pain</option><option value="asymptomatic">Asymptomatic</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Resting Blood Pressure (mm Hg)<input class="form-control" id="bp" type="number" placeholder="e.g. 120"></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Cholesterol (mg/dl)<input class="form-control" id="chol" type="number" placeholder="e.g. 200"></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Fasting Blood Sugar<select class="form-select" id="sugar"><option value="">Select</option><option value="normal">Normal</option><option value="high">High</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Resting ECG<select class="form-select" id="ecg"><option value="">Select</option><option>Normal</option><option>ST-T Abnormality</option><option>LV Hypertrophy</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Max Heart Rate<input class="form-control" id="hr" type="number" placeholder="e.g. 150"></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Exercise Induced Angina<select class="form-select" id="angina"><option value="">Select</option><option value="no">No</option><option value="yes">Yes</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">ST Depression<input class="form-control" id="st" type="number" step=".1" placeholder="e.g. 1.5"></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Slope<select class="form-select" id="slope"><option value="">Select</option><option>Up</option><option>Flat</option><option>Down</option></select></label></div>
+                  <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Number of Major Vessels<select class="form-select" id="vessels"><option value="">Select</option><option>0</option><option>1</option><option>2</option><option>3</option></select></label></div>
+                </div>
+                <div class="form-actions"><button class="btn btn-danger btn-red" id="predictBtn">♥ &nbsp;Predict Now</button><button class="btn btn-dark btn-dark" id="resetBtn">⟳ &nbsp;Reset</button></div>
+                <div id="validation" class="validation"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-5">
+            <div class="right-stack d-flex flex-column gap-3 h-100">
+              <div class="panel card result-panel">
+                <div class="panel-head d-flex align-items-center justify-content-between"><h2>⌁ &nbsp;Prediction Result</h2></div>
+                <div class="result-content">
+                  <div class="result-heart">♥</div>
+                  <div><span>Risk Level:</span><strong id="riskLevel">High Risk</strong><p id="riskText">The model predicts a high chance of heart disease. Please consult a doctor.</p></div>
+                  <div class="score-ring" id="scoreRing"><span id="score">78%</span><small>Risk Score</small></div>
+                </div>
+              </div>
+              <div class="panel card recent-panel flex-grow-1">
+                <div class="panel-head d-flex align-items-center justify-content-between gap-2"><h2>◷ &nbsp;Recent Predictions</h2><button class="btn btn-outline-secondary btn-sm mini-btn" data-go="patients">View All</button></div>
+                <div class="table-responsive">
+                  <table class="data-table table table-dark table-hover align-middle mb-0" id="recentTable">
+                    <thead><tr><th>#</th><th>Patient Name</th><th>Age</th><th>Risk Level</th><th>Risk Score</th><th>Date</th></tr></thead>
+                    <tbody>
+                      <tr><td>1</td><td>Ali Raza</td><td>52</td><td><span class="badge high-badge">High</span></td><td>82%</td><td>12 Sep 2025</td></tr>
+                      <tr><td>2</td><td>Sara Khan</td><td>45</td><td><span class="badge low-badge">Low</span></td><td>23%</td><td>12 Sep 2025</td></tr>
+                      <tr><td>3</td><td>Umar Farooq</td><td>60</td><td><span class="badge high-badge">High</span></td><td>76%</td><td>11 Sep 2025</td></tr>
+                      <tr><td>4</td><td>Ayesha Malik</td><td>38</td><td><span class="badge low-badge">Low</span></td><td>28%</td><td>11 Sep 2025</td></tr>
+                      <tr><td>5</td><td>Bilal Ahmad</td><td>55</td><td><span class="badge high-badge">High</span></td><td>81%</td><td>10 Sep 2025</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PREDICT PAGE -->
+      <section class="page-section" id="section-predict">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Predict Disease</h1><p>Enter patient parameters to calculate an illustrative heart-risk score.</p></div></div>
+        <div class="panel card standalone-form">
+          <div class="panel-head d-flex align-items-center justify-content-between"><h2>♥ &nbsp;Patient Risk Assessment</h2></div>
+          <div class="prediction-form">
+            <div class="row g-3">
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Patient Name<input class="form-control" id="pname" type="text" placeholder="e.g. Muhammad Ali"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Age<input class="form-control" id="page" type="number" placeholder="e.g. 45"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Sex<select class="form-select" id="psex"><option value="">Select</option><option>Male</option><option>Female</option></select></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Chest Pain Type<select class="form-select" id="pchest"><option value="">Select</option><option>Typical Angina</option><option>Atypical Angina</option><option>Non-anginal Pain</option><option>Asymptomatic</option></select></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Resting Blood Pressure<input class="form-control" id="pbp" type="number" placeholder="e.g. 120"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Cholesterol<input class="form-control" id="pchol" type="number" placeholder="e.g. 200"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Max Heart Rate<input class="form-control" id="phr" type="number" placeholder="e.g. 150"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Exercise Induced Angina<select class="form-select" id="pangina"><option value="">Select</option><option>No</option><option>Yes</option></select></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">ST Depression<input class="form-control" id="pst" type="number" step=".1" placeholder="e.g. 1.5"></label></div>
+              <div class="col-12 col-md-6 col-xl-4"><label class="form-label w-100">Major Vessels<select class="form-select" id="pvessels"><option value="">Select</option><option>0</option><option>1</option><option>2</option><option>3</option></select></label></div>
+            </div>
+            <div class="form-actions"><button class="btn btn-danger btn-red" id="fullPredictBtn">♥ &nbsp;Run Prediction</button><button class="btn btn-dark btn-dark" id="fullResetBtn">⟳ &nbsp;Reset</button></div>
+            <div class="full-result" id="fullResult">Prediction output will appear here.</div>
+          </div>
+        </div>
+      </section>
+      <!-- PATIENTS -->
+      <section class="page-section" id="section-patients">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Patient Records</h1><p>Manage and search patient prediction records.</p></div><button class="btn btn-danger btn-red" id="addPatientBtn">＋ Add Patient</button></div>
+        <div class="panel card">
+          <div class="toolbar d-flex align-items-center gap-3 flex-wrap p-3"><input id="patientSearch" class="table-search form-control" placeholder="Search patient name..."><span id="patientCount">5 records</span></div>
+          <div class="table-responsive">
+            <table class="data-table large-table table table-dark table-hover align-middle mb-0" id="patientsTable">
+              <thead><tr><th>#</th><th>Patient Name</th><th>Age</th><th>Risk Level</th><th>Risk Score</th><th>Date</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Ali Raza</td><td>52</td><td><span class="badge high-badge">High</span></td><td>82%</td><td>12 Sep 2025</td><td><button class="btn btn-outline-secondary btn-sm row-btn" type="button">View</button></td></tr>
+                <tr><td>2</td><td>Sara Khan</td><td>45</td><td><span class="badge low-badge">Low</span></td><td>23%</td><td>12 Sep 2025</td><td><button class="btn btn-outline-secondary btn-sm row-btn" type="button">View</button></td></tr>
+                <tr><td>3</td><td>Umar Farooq</td><td>60</td><td><span class="badge high-badge">High</span></td><td>76%</td><td>11 Sep 2025</td><td><button class="btn btn-outline-secondary btn-sm row-btn" type="button">View</button></td></tr>
+                <tr><td>4</td><td>Ayesha Malik</td><td>38</td><td><span class="badge low-badge">Low</span></td><td>28%</td><td>11 Sep 2025</td><td><button class="btn btn-outline-secondary btn-sm row-btn" type="button">View</button></td></tr>
+                <tr><td>5</td><td>Bilal Ahmad</td><td>55</td><td><span class="badge high-badge">High</span></td><td>81%</td><td>10 Sep 2025</td><td><button class="btn btn-outline-secondary btn-sm row-btn" type="button">View</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- ANALYTICS -->
+      <section class="page-section" id="section-analytics">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Analytics</h1><p>Key performance and heart-risk indicators.</p></div></div>
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">↗</div><div><strong>75%</strong><span>Model Accuracy</span><em>+5% this month</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">✓</div><div><strong>1,248</strong><span>Predictions</span><em>+12% this month</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">!</div><div><strong>312</strong><span>High Risk</span><em>25% of patients</em></div></div></div>
+          <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">◉</div><div><strong>936</strong><span>Low Risk</span><em>75% of patients</em></div></div></div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12 col-xl-8">
+            <div class="panel card h-100"><div class="panel-head d-flex align-items-center justify-content-between"><h2>Monthly Risk Cases</h2></div><div class="big-bars">
+              <div><i style="height:40%"></i><span>Jan</span></div><div><i style="height:38%"></i><span>Feb</span></div><div><i style="height:70%"></i><span>Mar</span></div><div><i style="height:50%"></i><span>Apr</span></div><div><i style="height:51%"></i><span>May</span></div><div><i style="height:73%"></i><span>Jun</span></div><div><i style="height:51%"></i><span>Jul</span></div><div><i style="height:42%"></i><span>Aug</span></div><div><i style="height:82%"></i><span>Sep</span></div><div><i style="height:66%"></i><span>Oct</span></div><div><i style="height:84%"></i><span>Nov</span></div><div><i style="height:68%"></i><span>Dec</span></div>
+            </div></div>
+          </div>
+          <div class="col-12 col-xl-4">
+            <div class="panel card insight h-100"><div class="panel-head d-flex align-items-center justify-content-between"><h2>AI Insights</h2></div><div class="insight-card">⚠ <b>Age</b><p>is currently the strongest risk factor at 82% impact.</p></div><div class="insight-card">♥ <b>75%</b><p>of recorded patients are currently classified as low risk.</p></div><div class="insight-card">↗ <b>5%</b><p>improvement in prediction accuracy compared with last month.</p></div></div>
+          </div>
+        </div>
+      </section>
+      <!-- REPORTS -->
+      <section class="page-section" id="section-reports">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Reports</h1><p>Create and export simple dashboard reports.</p></div><button class="btn btn-danger btn-red" id="generateReport">＋ Generate Report</button></div>
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-md-6 col-xl-4"><div class="report-card card h-100"><div class="report-icon">▤</div><h3>Risk Summary</h3><p>Overview of high and low risk patient distribution.</p><button class="btn btn-outline-danger report-action" data-report="Risk Summary">Open Report</button></div></div>
+          <div class="col-12 col-md-6 col-xl-4"><div class="report-card card h-100"><div class="report-icon">▥</div><h3>Patient Activity</h3><p>Recent patient predictions and risk scores.</p><button class="btn btn-outline-danger report-action" data-report="Patient Activity">Open Report</button></div></div>
+          <div class="col-12 col-md-6 col-xl-4"><div class="report-card card h-100"><div class="report-icon">↗</div><h3>Model Performance</h3><p>Prediction accuracy and monthly trend indicators.</p><button class="btn btn-outline-danger report-action" data-report="Model Performance">Open Report</button></div></div>
+        </div>
+        <div class="panel card report-output" id="reportOutput"><h2>Report Preview</h2><p>Select a report above to open its preview.</p></div>
+      </section>
+      <!-- SETTINGS -->
+      <section class="page-section" id="section-settings">
+        <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Settings</h1><p>Customize your CardioPredict dashboard.</p></div></div>
+        <div class="panel card settings-panel">
+          <div class="setting-row"><div><h3>Notifications</h3><p>Receive alerts for high-risk predictions.</p></div><div class="form-check form-switch"><input class="form-check-input switch-input" type="checkbox" id="notifToggle" checked></div></div>
+          <div class="setting-row"><div><h3>Compact Sidebar</h3><p>Reduce the navigation sidebar width.</p></div><div class="form-check form-switch"><input class="form-check-input switch-input" type="checkbox" id="compactToggle"></div></div>
+          <div class="setting-row"><div><h3>Red Accent</h3><p>Keep the CardioPredict red visual theme enabled.</p></div><div class="form-check form-switch"><input class="form-check-input switch-input" type="checkbox" id="accentToggle" checked></div></div>
+          <div class="setting-row"><div><h3>Administrator</h3><p>Signed in as Dr. Ahmed — Administrator.</p></div><span class="status-pill">Active</span></div>
+          <div class="developer-note">Project performed by <b>Danish Zahoor</b>.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="appToast" class="toast text-bg-dark border-danger" role="alert"><div class="toast-body" id="toastText">Done.</div></div>
+</div>
+<!-- Patient modal -->
+<div class="modal fade" id="patientModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content dark-modal"><div class="modal-header"><h5 class="modal-title">Patient Record</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body" id="modalBody"></div></div></div></div>
+<!-- Local Bootstrap and jQuery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

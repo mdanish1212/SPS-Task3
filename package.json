@@ -1,0 +1,10 @@
+{
+  "name": "cardiopredict-bootstrap-jquery",
+  "version": "1.0.0",
+  "description": "CardioPredict responsive dashboard using local Bootstrap and jQuery",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  }
+}
