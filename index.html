@@ -36,7 +36,6 @@
     </div>
     <div class="copyright">© 2026 CardioPredict<br>All Rights Reserved.<br><b>Performed by Danish Zahoor</b></div>
   </aside>
-
   <!-- Main content -->
   <main class="main">
     <!-- Top navigation -->
@@ -54,7 +53,6 @@
         <span>⌄</span>
       </div>
     </header>
-
     <div class="content container-fluid">
       <!-- DASHBOARD -->
       <section class="page-section active" id="section-dashboard">
@@ -62,7 +60,6 @@
           <div><h1>Dashboard</h1><p>AI-powered heart disease risk monitoring overview</p></div>
           <button class="btn btn-danger btn-red" data-go="predict">＋ New Prediction</button>
         </div>
-
         <!-- Statistics -->
         <div class="row g-3 mb-3">
           <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">♟</div><div><strong>1,248</strong><span>Total Patients</span><em>↑ 12% from last month</em></div></div></div>
@@ -70,7 +67,6 @@
           <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">✓</div><div><strong>936</strong><span>Low Risk Cases</span><em>↑ 15% from last month</em></div></div></div>
           <div class="col-12 col-sm-6 col-xl-3"><div class="stat-card card h-100"><div class="stat-icon">◔</div><div><strong>75%</strong><span>Prediction Accuracy</span><em>↑ 5% from last month</em></div></div></div>
         </div>
-
         <!-- Charts -->
         <div class="row g-3 mb-3">
           <div class="col-12 col-lg-6 col-xl-7">
@@ -89,7 +85,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-sm-6 col-lg-3 col-xl-2">
             <div class="panel card h-100 donut-panel">
               <div class="panel-head d-flex align-items-center justify-content-between"><h2>▮ &nbsp;Risk Distribution</h2></div>
@@ -97,7 +92,6 @@
               <div class="donut-legend"><span><i class="dot high"></i>High Risk (75%)</span><span><i class="dot low"></i>Low Risk (25%)</span></div>
             </div>
           </div>
-
           <div class="col-12 col-sm-6 col-lg-3 col-xl-3">
             <div class="panel card h-100 factors-panel">
               <div class="panel-head d-flex align-items-center justify-content-between"><h2>⌁ &nbsp;Top Risk Factors</h2></div>
@@ -111,7 +105,6 @@
             </div>
           </div>
         </div>
-
         <!-- Prediction and recent records -->
         <div class="row g-3">
           <div class="col-12 col-xl-7">
@@ -137,7 +130,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-xl-5">
             <div class="right-stack d-flex flex-column gap-3 h-100">
               <div class="panel card result-panel">
@@ -148,7 +140,6 @@
                   <div class="score-ring" id="scoreRing"><span id="score">78%</span><small>Risk Score</small></div>
                 </div>
               </div>
-
               <div class="panel card recent-panel flex-grow-1">
                 <div class="panel-head d-flex align-items-center justify-content-between gap-2"><h2>◷ &nbsp;Recent Predictions</h2><button class="btn btn-outline-secondary btn-sm mini-btn" data-go="patients">View All</button></div>
                 <div class="table-responsive">
@@ -168,7 +159,6 @@
           </div>
         </div>
       </section>
-
       <!-- PREDICT PAGE -->
       <section class="page-section" id="section-predict">
         <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Predict Disease</h1><p>Enter patient parameters to calculate an illustrative heart-risk score.</p></div></div>
@@ -192,7 +182,6 @@
           </div>
         </div>
       </section>
-
       <!-- PATIENTS -->
       <section class="page-section" id="section-patients">
         <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Patient Records</h1><p>Manage and search patient prediction records.</p></div><button class="btn btn-danger btn-red" id="addPatientBtn">＋ Add Patient</button></div>
@@ -212,7 +201,6 @@
           </div>
         </div>
       </section>
-
       <!-- ANALYTICS -->
       <section class="page-section" id="section-analytics">
         <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Analytics</h1><p>Key performance and heart-risk indicators.</p></div></div>
@@ -233,7 +221,6 @@
           </div>
         </div>
       </section>
-
       <!-- REPORTS -->
       <section class="page-section" id="section-reports">
         <div class="page-title d-flex justify-content-between align-items-center flex-wrap gap-3"><div><h1>Reports</h1><p>Create and export simple dashboard reports.</p></div><button class="btn btn-danger btn-red" id="generateReport">＋ Generate Report</button></div>
@@ -259,15 +246,12 @@
     </div>
   </main>
 </div>
-
 <!-- Toast -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="appToast" class="toast text-bg-dark border-danger" role="alert"><div class="toast-body" id="toastText">Done.</div></div>
 </div>
-
 <!-- Patient modal -->
 <div class="modal fade" id="patientModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content dark-modal"><div class="modal-header"><h5 class="modal-title">Patient Record</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body" id="modalBody"></div></div></div></div>
-
 <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- Bootstrap JS CDN -->
